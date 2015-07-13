@@ -1,1 +1,10 @@
+If you have multiple nodes in your Elasticsearch cluster, the easiest way to distribute Kibana requests across the nodes 
+is to run an Elasticsearch client node on the same machine as Kibana. Elasticsearch client nodes are essentially smart 
+load balancers that are part of the cluster. They process incoming HTTP requests, redirect operations to the other nodes 
+in the cluster as needed, and gather and return the results. For more information, see Node in the Elasticsearch 
+reference.
+
+
+Refer Below link for complete understanding..
+
 https://www.elastic.co/guide/en/kibana/current/production.html
