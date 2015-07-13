@@ -1,0 +1,41 @@
+Fire up an instance of with your favourite AMI and choose t2.micro or medium instance
+
+Login to instance and follow below steps
+
+wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.5.1.zip
+
+next: Unzip it
+
+Install the cloud AWS plugin so you can take advantage of features like automatic node discovery.
+
+cd /usr/local/elasticsearch/elasticsearch-1.5.1/
+
+./bin/plugin install elasticsearch/elasticsearch-cloud-aws/2.5.1
+
+
+Now that the AWS plugin is installed, configure it by adding your Amazon credentials to the elasticsearch configuration 
+file - config/elasticsearch.yml. 
+
+
+A Simple YAML configuration is:
+
+cloud:
+    aws:
+        access_key: <YOUR AWS KEY>
+        secret_key: <YOUR AWS SECRET>
+        region:     <YOUR Region>
+discovery:
+    type: ec2
+    
+    
+Now just about ready to start elasticsearch..
+
+
+Start ElatticSearch:
+
+./bin/elasticsearch
+
+
+to confirm the whether services starte or not
+
+http://server_IP:9200/_plugin/head/
