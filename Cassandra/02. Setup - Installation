@@ -1,1 +1,17 @@
-thisi
+Requirement:
+===========
+
+Need to setup Cassandra 4 node distributed environment..
+for this, need to install Cassandra server, OpsCenter and datastax-agent 
+
+Steps:
+=======
+
+
+Cassandra - is server
+OpsCenter - is web based UI to monitor cluster
+datastax-agent - is child component to to start on all nodes..
+
+child components will report to opscenter ( like heartbeat)..
+
+
