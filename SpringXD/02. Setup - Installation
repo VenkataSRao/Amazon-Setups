@@ -1,0 +1,54 @@
+Pre-Requisites:
+
+Jdk 1.7 or higher is required..
+Database need to be installed and create one database for springxd ( this is required to mention in servers.yml file in
+configuration .. In our case using mysql, so installed mysql and created datacase called springxd)
+
+sytanxt to create database in mysql
+
+create database springxd;
+
+
+
+======================================================================
+
+Steps to Install Springxd 1.2.0 RELEASE version
+
+Step1:
+
+Download spring xd from below location
+http://docs.spring.io/spring-xd/docs/1.2.0.RELEASE/reference/html/
+
+Step2:
+
+unzip this file and set path..
+
+Step3:
+
+update servers.yml file in (/path/to/install/location/spring_xd/spring-xd-1.2.0.RELEASE/xd/config/servers.yml )
+
+Step4:
+Specify activemq location in below path
+
+/path/to/install/location/spring_xd/spring-xd-1.1.0.M1/xd/config/jms-activemq.properties
+
+Step5:
+
+Mention username and password of activemq in below location
+
+/path/to/install/location/spring_xd/spring-xd-1.1.0.M1/xd/modules/common/jms-activemq-infrastructure-context.xml
+
+
+
+once above file has been changed.. then we can start service
+
+xd-admin &
+xd-container &
+xd-container & 
+xd-container & 
+
+In above case, am starting one admin and 3 containers..
+
+
+
+
