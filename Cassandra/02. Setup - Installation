@@ -14,6 +14,29 @@ datastax-agent - is child component to to start on all nodes..
 
 child components will report to opscenter ( like heartbeat)..
 
+In cassandra, Change below properties in cassandra.yaml file in conf directory.. ( Please follow strict indentation )
+
+cluster name
+-seeds
+data file directories
+log directories
+listen_address
+endpoint_snitch: Ec2Snitch
+
+once above modifications are done..
+
+To Start cassandra server.
+/bin/cassandra &
+
+To Start opscenter ( UI)
+opscenter &
+
+To start agens
+datastax-agent &
+
+
+
+
 
 
 
