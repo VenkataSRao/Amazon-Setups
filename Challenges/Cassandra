@@ -8,23 +8,23 @@ datastax-agent
  
 What we did:
 ============
-Initially took t2.micro instance and downloaded cassandra2.1.8 and updated cassandra.yaml file in conf directory and when trying to start
-cassandra services
+Initially took t2.micro instance and downloaded cassandra2.1.8 and updated cassandra.yaml file in conf directory and when 
+trying to start cassandra services
  
 below observations we found
  
-Connection error: ('Unable to connect to any servers', {'127.0.0.1': error(111, "Tried connecting to [('127.0.0.1', 9042)]. Last error:
-Connection refused")})
+Connection error: ('Unable to connect to any servers', {'127.0.0.1': error(111, "Tried connecting to [('127.0.0.1', 9042)]. 
+Last error: Connection refused")})
  
 and it is not starting services and also process has been killed automatically..
  
-after couple of times trying to update yaml file and tried doing all other stuff changing yaml file with different options.. but still no
-luck.. still having issues to start server...
+after couple of times trying to update yaml file and tried doing all other stuff changing yaml file with different options.. 
+but still no luck.. still having issues to start server...
  
 Solution:
 =========
-t2.micro instances are not sufficient to handle cassandra.. so we have taken m2.medium instance and downloaded cassandra2.1.8software and updated
-yaml file and started services..
+t2.micro instances are not sufficient to handle cassandra.. so we have taken m3.medium instance and downloaded cassandra2.1.8
+software and updated yaml file and started services..
  
 used below commands to start services:
  
@@ -38,8 +38,8 @@ everything is working fine here...
  
 again we faced some other issue here with opsceter..
  
-while adding cluster to datastax opscenter ( localhot:8888) and trying to add clustr with Manage existing Cluster option.. getting below exception
-Error creating cluster: Unexpected token <
+while adding cluster to datastax opscenter ( localhot:8888) and trying to add clustr with Manage existing Cluster option.. 
+getting below exception Error creating cluster: Unexpected token <
  
 tried all the options.. Struck with this unexpected token issue...
  
