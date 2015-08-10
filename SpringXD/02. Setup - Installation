@@ -57,6 +57,25 @@ Adding Cassandra as a sink:
 Below is procedure to include cassandra as a sinnk
 
 Step1: 
+git clone https://github.com/spring-projects/spring-xd-modules.git
+
+Step2:
+cd cassandra-sink
+
+Step3:      
+./gradlew clean build
+
+Step4:
+
+xd-shell ( Need to be in xd-shell )
+
+module upload --file /opt/spring-xd-modules/cassandra-sink/build/dist/deploy-to-xd/modules.sink.cassandra-1.0.0.BUILD-SNAPSHOT-uber.jar --name cassandra --type sink
+
+
+Once above steps are done.. type
+
+module list ( then cassandra sink can be seen in spring-xd)
+
 
 
 
