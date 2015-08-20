@@ -4,7 +4,6 @@ Steps:
 
 
 
-
 ./spark-ec2 --hadoop-major-version=2.6 -s 1 --instance-type=m3.medium --ebs-vol-size=8 --spot-price=0.4 --key-pair=PlantInsight --identity-file=/opt/igc_services/PlantInsight.pem --region=ap-southeast-1 --zone=ap-southeast-1a  --spark-version=1.4.1 launch Alt_spark-cluster
 
 
