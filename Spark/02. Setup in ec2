@@ -1,10 +1,51 @@
+Background:
+
+To Install Spark in Amazon.. 
+
+Pre-requisites:
+
+Have Amazon account and get ready with keys
+
+
+=============================================
+
 Steps:
 
+1. export below two keys through command line (terminal)
+    export AWS_SECRET_ACCESS_KEY=YOURSECRETKEY 
+    export AWS_ACCESS_KEY_ID=YOURACCESSKEY
+    Note: this will be only for that session.. if close window is closed.. again need to export keys
+    
+    
+2. Dowload Spark 1.4.1 from spark's site and set path
+
+3. cd /path/downloaded/spark-1.4.1-bin-hadoop2.6/ec2
+
+4. ./spark-ec2 --hadoop-major-version=2 -s 1 --instance-type=m3.medium --ebs-vol-size=8 --spot-price=0.4 --key-pair=MyKey --identity-file=/path/to/filenanme.pem --region=ap-southeast-1 --zone=ap-southeast-1a  --spark-version=1.4.1 launch MY_SPARK_CLUSTER
+    
+        Note: below parameters will be changed based on user's preference
+            
+            hadoop-major-version
+            -s ( number of slaves )
+            instance-type
+            ebs-vol-size
+            region
+            zone
+            spark-version
 
 
+5. 4th step will create spark with number of slaves mentioned..
 
+6. Checking:
 
-./spark-ec2 --hadoop-major-version=2.6 -s 1 --instance-type=m3.medium --ebs-vol-size=8 --spot-price=0.4 --key-pair=PlantInsight --identity-file=/opt/igc_services/PlantInsight.pem --region=ap-southeast-1 --zone=ap-southeast-1a  --spark-version=1.4.1 launch Alt_spark-cluster
+    a. launch spark's master's URL in browser
+    b. ssh to slave box and check hadoop version
+    
+    
+    Enjoy.. with Spark .. :-)
+    
+    
+    
 
 
 
