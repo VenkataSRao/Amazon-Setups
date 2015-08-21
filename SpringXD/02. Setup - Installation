@@ -78,6 +78,3 @@ module list ( then cassandra sink can be seen in spring-xd)
 
 
 
-
-
-
