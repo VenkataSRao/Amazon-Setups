@@ -44,3 +44,5 @@ To login to mysql terminal:
 mysql -uroot -proot
 
 show databases;
+
+
